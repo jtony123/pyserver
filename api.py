@@ -20,7 +20,7 @@ sensor = adafruit_max31855.MAX31855(spi, cs);
 
 @app.route('/', methods=['GET'])
 def index():
-	return str(sensor.temperature)
+	return str(round(sensor.temperature, 1))
 
 
 #if __name__ == "__main__":
